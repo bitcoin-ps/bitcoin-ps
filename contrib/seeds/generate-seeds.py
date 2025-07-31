@@ -22,7 +22,7 @@ These files must consist of lines in the format
 
 The output will be several data structures with the peers in binary format:
 
-   static const uint8_t chainparams_seed_{main,signet,test,testnet4}[]={
+   static const uint8_t chainparams_seed_{main,signet,test,testnet4,bcps}[]={
    ...
    }
 
@@ -179,6 +179,9 @@ def main():
     g.write('\n')
     with open(os.path.join(indir,'nodes_testnet4.txt'), 'r', encoding="utf8") as f:
         process_nodes(g, f, 'chainparams_seed_testnet4')
+    g.write('\n')
+    with open(os.path.join(indir,'nodes_bcps.txt'), 'r', encoding="utf8") as f:
+        process_nodes(g, f, 'chainparams_seed_bcps')
     g.write('#endif // BITCOIN_CHAINPARAMSSEEDS_H\n')
 
 if __name__ == '__main__':
