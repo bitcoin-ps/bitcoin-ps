@@ -114,8 +114,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].threshold = 1815; // 90%
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].period = 2016;
 
-        consensus.nMinimumChainWork = uint256{"000000000000000000000000000000000000000000000000000007ea07ea07ea"};
-        consensus.defaultAssumeValid = uint256{"000000003737a4f7190259f7af7c1541d6774a522e16500bd905d30106343d7d"};
+        consensus.nMinimumChainWork = uint256{"00000000000000000000000000000000000000000000000000000e450e450e45"};
+        consensus.defaultAssumeValid = uint256{"00000000d47a2b08e5795c230f2b9e3caabdbe4ce8af2016797975795d4b7e29"}; // 3652
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -141,7 +141,7 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        //vSeeds.emplace_back("seed.none.be.");
+        vSeeds.emplace_back("seed.bitcoin-ps.ddns-ip.net.");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
